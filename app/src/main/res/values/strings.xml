@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">FiveContacts</string>
+    <string name="bem_vindo">Bem Vindo</string>
+    <string name="login">Login</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="novo">Novo</string>
+    <string name="nome">Nome</string>
+    <string name="novo_usuario">Novo Usuário</string>
+    <string name="alterar_usuario">Alterar Usuário</string>
+    <string name="esqueceu">Esqueceu a senha?</string>
+    <string name="usuario">Usuário</string>
+    <string name="email">E-Mail</string>
+    <string name="manter">Manter logado?</string>
+    <string name="criar">Criar</string>
+    <string name="alterar">Alterar</string>
+    <string name="title_activity_novo">NovoActivity</string>
+    <string name="selecione">Selecione os Contatos</string>
+    <string name="salvar_contatos">Salvar contatos</string>
+    <string name="mudar_contatos">Mudar Contatos</string>
+    <string name="perfil">Perfil</string>
+    <string name="ligar">Ligar</string>
+</resources>

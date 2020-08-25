@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8BC34A"
+    tools:context=".activities.NovoActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/novo_usuario"
+        android:textAlignment="center"
+        android:textColor="#1E3C1E"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nomeEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#FFFFFF"
+        android:ems="8"
+        android:hint="@string/nome"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#1E3C1E"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/loginEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#FFFFFF"
+        android:ems="8"
+        android:hint="@string/login"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#1E3C1E"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/nomeEditText"
+        app:layout_constraintStart_toStartOf="@+id/nomeEditText"
+        app:layout_constraintTop_toBottomOf="@+id/nomeEditText" />
+
+    <EditText
+        android:id="@+id/senhaEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#FFFFFF"
+        android:ems="8"
+        android:hint="@string/senha"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="#1E3C1E"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/loginEditText"
+        app:layout_constraintStart_toStartOf="@+id/loginEditText"
+        app:layout_constraintTop_toBottomOf="@+id/loginEditText" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#FFFFFF"
+        android:ems="8"
+        android:hint="@string/email"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textColor="#1E3C1E"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/senhaEditText"
+        app:layout_constraintStart_toStartOf="@+id/senhaEditText"
+        app:layout_constraintTop_toBottomOf="@+id/senhaEditText" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/manterSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/manter"
+        android:textAlignment="viewStart"
+        android:textColor="#1E3C1E"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/emailEditText"
+        app:layout_constraintStart_toStartOf="@+id/emailEditText"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
+
+    <Button
+        android:id="@+id/alterarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#1E3C1E"
+        android:backgroundTint="#1E3C1E"
+        android:ems="8"
+        android:text="@string/criar"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@id/manterSwitch"
+        app:layout_constraintStart_toStartOf="@+id/manterSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/manterSwitch" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
