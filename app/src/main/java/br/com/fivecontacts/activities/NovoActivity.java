@@ -1,15 +1,16 @@
 package br.com.fivecontacts.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SwitchCompat;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
+
 import br.com.fivecontacts.R;
 import br.com.fivecontacts.models.User;
 
@@ -27,12 +28,7 @@ public class NovoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_novo);
 
-        nomeEditText = findViewById(R.id.nomeEditText);
-        loginEditText = findViewById(R.id.loginEditText);
-        senhaEditText = findViewById(R.id.senhaEditText);
-        emailEditText = findViewById(R.id.emailEditText);
-        manterSwitch = findViewById(R.id.manterSwitch);
-        criarButton = findViewById(R.id.alterarButton);
+        iniciarElementos();
 
         criarButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,12 +50,24 @@ public class NovoActivity extends AppCompatActivity {
                 editor.putBoolean("manterLogado", manterLogado);
                 editor.commit();
 
+                User user = new User(nome, login, senha, email);
+
                 Intent intent =
                         new Intent(NovoActivity.this, PickContactsActivity.class);
+                intent.putExtra("usuario", user);
                 startActivity(intent);
 
                 finish();
             }
         });
+    }
+
+    private void iniciarElementos() {
+        nomeEditText = findViewById(R.id.nomeEditText);
+        loginEditText = findViewById(R.id.loginEditText);
+        senhaEditText = findViewById(R.id.senhaEditText);
+        emailEditText = findViewById(R.id.emailEditText);
+        manterSwitch = findViewById(R.id.manterSwitch);
+        criarButton = findViewById(R.id.alterarButton);
     }
 }

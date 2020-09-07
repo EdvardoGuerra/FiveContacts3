@@ -37,12 +37,7 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
-        loginEditText = findViewById(R.id.loginEditText);
-        senhaEditText = findViewById(R.id.senhaEditText);
-        entrarButton = findViewById(R.id.alterarButton);
-        novoButton = findViewById(R.id.novoButton);
-        esqueceuTextView = findViewById(R.id.esqueceuTextView);
-        esqueceuTextView.setPaintFlags(esqueceuTextView.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        iniciarElementos();
 
         entrarButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +80,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void iniciarElementos() {
+        loginEditText = findViewById(R.id.loginEditText);
+        senhaEditText = findViewById(R.id.senhaEditText);
+        entrarButton = findViewById(R.id.alterarButton);
+        novoButton = findViewById(R.id.novoButton);
+        esqueceuTextView = findViewById(R.id.esqueceuTextView);
+        esqueceuTextView.setPaintFlags(esqueceuTextView.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+    }
+
     private User montarObjetoUser() {
         SharedPreferences temUser =
                 getSharedPreferences("usuarioPadrao", Activity.MODE_PRIVATE);
@@ -93,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
         String senhaSalva = temUser.getString("senha", "");
         String emailSalvo = temUser.getString("email", "");
         boolean manterLogadoSalvo = temUser.getBoolean("manterLogado", false);
-//        User user = new User(nomeSalvo, loginSalvo, senhaSalva, emailSalvo, manterLogadoSalvo);
         User user = new User(nomeSalvo, loginSalvo, senhaSalva, emailSalvo);
         return user;
     }

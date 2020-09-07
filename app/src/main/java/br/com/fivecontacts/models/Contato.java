@@ -4,10 +4,14 @@ public class Contato {
     String nome;
     String numero;
 
+    public Contato() {
+    }
+
     public Contato(String nome, String numero) {
         this.nome = nome;
         this.numero = numero;
     }
+
 
     public String getNome() {
         return nome;

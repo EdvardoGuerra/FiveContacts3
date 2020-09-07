@@ -34,20 +34,20 @@ public class AlterarUsuarioActivity extends AppCompatActivity {
         manterSwitch = findViewById(R.id.manterSwitch);
         alterarButton = findViewById(R.id.alterarButton);
 
-//        Intent quemChamou = this.getIntent();
-//        if (quemChamou!= null){
-//            Bundle params = quemChamou.getExtras();
-//            if (params!=null){
-//                user = (User) params.getSerializable("usuario");
-//                if (user!=null){
-//                    nomeEditText.setText(user.getNome());
-//                    loginEditText.setText(user.getLogin());
-//                    senhaEditText.setText(user.getSenha());
-//                    emailEditText.setText(user.getEmail());
-//                    manterSwitch.setChecked(user.isManterLogado());
-//                }
-//            }
-//        }
+        Intent quemChamou = this.getIntent();
+        if (quemChamou!= null){
+            Bundle params = quemChamou.getExtras();
+            if (params!=null){
+                user = (User) params.getSerializable("usuario");
+                if (user!=null){
+                    nomeEditText.setText(user.getNome());
+                    loginEditText.setText(user.getLogin());
+                    senhaEditText.setText(user.getSenha());
+                    emailEditText.setText(user.getEmail());
+                    manterSwitch.setChecked(false);
+                }
+            }
+        }
 
 
         final SharedPreferences alteraUsuario =
@@ -79,7 +79,7 @@ public class AlterarUsuarioActivity extends AppCompatActivity {
                         new Intent(AlterarUsuarioActivity.this,
                                ListaDeContatos_ListViewActivity.class);
                 startActivity(intent);
-//                finish();
+                finish();
             }
         });
     }
